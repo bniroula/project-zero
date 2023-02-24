@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class Profile {
+public class ProfileDTO {
     private Integer age;
     private Integer numberOfBath;
     private Integer numberOfBed;
