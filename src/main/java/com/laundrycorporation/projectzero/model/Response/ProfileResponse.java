@@ -1,4 +1,4 @@
-package com.laundrycorporation.projectzero.model;
+package com.laundrycorporation.projectzero.model.Response;
 
 import lombok.Builder;
 import lombok.Data;
@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Builder
-public class ProfileDTO {
+public class ProfileResponse {
     private Integer age;
     private Integer numberOfBath;
     private Integer numberOfBed;

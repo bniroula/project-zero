@@ -1,6 +1,6 @@
 package com.laundrycorporation.projectzero.controller;
 
-import com.laundrycorporation.projectzero.model.ProfileDTO;
+import com.laundrycorporation.projectzero.model.Response.ProfileResponse;
 import com.laundrycorporation.projectzero.repository.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,9 +17,9 @@ public class FeedController {
     private ProfileRepository profileRepository;
 
     @GetMapping("/feed")
-    public ResponseEntity<List<ProfileDTO>> findAlLProfiles() {
+    public ResponseEntity<List<ProfileResponse>> findAlLProfiles() {
         try {
-            List<ProfileDTO> profiles = profileRepository.findAll();
+            List<ProfileResponse> profiles = profileRepository.findAll();
 
             if (profiles.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
