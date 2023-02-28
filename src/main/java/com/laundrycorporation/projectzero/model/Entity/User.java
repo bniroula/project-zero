@@ -28,7 +28,6 @@ public class User {
     String firstName;
     String lastName;
     ZonedDateTime dateOfBirth;
-
     String email;
     String phoneNumber;
     Boolean hasRoom;
