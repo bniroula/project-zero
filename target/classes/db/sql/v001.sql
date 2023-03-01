@@ -20,5 +20,16 @@ CREATE TABLE IF NOT EXISTS data.user
 CREATE UNIQUE INDEX IF NOT EXISTS pk_user
     ON data.user(id);
 
+CREATE TABLE IF NOT EXISTS data.temp_feed
+(
+    id              UUID         NOT NULL,
+    name            VARCHAR(50)  NOT NULL,
+    bio             TEXT  NOT NULL,
+    img             TEXT NOT NULL
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS pk_temp_feed
+    ON data.temp_feed(id);
+
 --rollback DROP SCHEMA IF EXISTS data CASCADE;
 --rollback/
